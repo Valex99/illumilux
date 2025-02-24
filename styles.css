@@ -11,7 +11,7 @@
   align-items: center;
 
   background-color: #242833;
-  background-color: #0ba5cc;
+  background-color: #002c5b;
   color: white;
   padding: 10px 0;
   font-size: 13px;
@@ -27,7 +27,7 @@
 
 .logo {
   height: 30px;
-  filter: brightness(80%);
+  cursor: pointer;
 }
 
 .name {
@@ -37,6 +37,7 @@
   margin-left: 10px;
   margin-right: 30px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .header-link {
@@ -48,6 +49,10 @@
   font-size: 18px;
 }
 
+.header-link:hover {
+  scale: 1.1;
+}
+
 /**/
 
 .banner {
@@ -56,45 +61,122 @@
   object-fit: cover;
 }
 
-.bestseller {
-  padding-top: 20px;
-  height: 70px;
+
+.category-section {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #1a1d26;
+  color: white;
+  margin-top: -5px;
+}
+
+.category-section h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.category-buttons {
   display: flex;
   justify-content: center;
-  font-weight: bold;
-  font-size: 28px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
+
+.category-btn {
+  background-color: #0d9cc0;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.category-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
 
 /**/
-.grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-
-  padding: 0 200px;
-
+.bestseller {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  background: linear-gradient(90deg, #0056b3, #0d9cc0);
+  padding-bottom: 20px;
+  border-radius:0 0 8px 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.bestseller-item {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 20px;
+.bestseller::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: white;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
 
+/* Responsive Grid */
+.grid {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 10%;
 }
 
+/* Modern Product Cards */
+.bestseller-item {
+  background: #1c1f27;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 230px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bestseller-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Product Image */
 .bestseller-product {
-  height: 200px;
-  width: 200px;
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
+/* Product Name */
 .product-name {
-  margin-top: 10px;
-  padding-bottom: 5px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 8px;
 }
+
+/* Product Price */
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0d9cc0;
+}
+
 /*
 Next up - fix grid - fix height
 Doday kategorije...
